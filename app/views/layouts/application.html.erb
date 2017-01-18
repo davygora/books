@@ -8,11 +8,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= bootstrap_flash %>
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <%= yield %>
+  <%= render 'shared/navbar' %>
+    <%= bootstrap_flash %>
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <%= yield %>
+        </div>
       </div>
-    </div>
 </body>
 </html>
