@@ -4,11 +4,14 @@
   </div>
   <% @books.each do |book| %>
   <div class="col-lg-4 col-sm-6 text-center">
-      <img class="img-circle img-responsive img-center" <%= image_tag book.cover.url %>
+    <img class="img-circle img-responsive img-center" <%= image_tag book.cover.url %>
       <h3><%= book.title %>
           <small><%= book.author %></small>
       </h3>
       <p><%= book.summary %></p>
+      <% book.categories.each do |category| %>
+        <p> <%= category.title %> </p>
+        <% end %>
   </div>
   <% end %>
 </div>
