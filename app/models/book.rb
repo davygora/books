@@ -4,4 +4,6 @@ class Book < ActiveRecord::Base
   has_and_belongs_to_many :categories
   has_attached_file :cover, styles: { small: '150x150'}
   validates_attachment_content_type :cover, content_type: ["image/jpg", "image/jpeg", "image/png"]
+
+  scope :last_week, -> { where("created_at >= ?", 7.days.ago) }
 end

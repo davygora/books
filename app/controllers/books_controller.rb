@@ -1,9 +1,9 @@
 class BooksController < ApplicationController
 
-  before_filter :authorize, only: [:new ]
+  before_filter :authorize, only: [:new, :destroy ]
 
   def index
-    @books = Book.all
+    @books = Book.all.last_week
   end
 
   def new
