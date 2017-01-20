@@ -1,0 +1,27 @@
+<% if @books.count == 0 %>
+
+  <h1>You don't have books in draft</h1>
+
+<% else %>
+
+<div class="row">
+  <div class="col-lg-12">
+    <h2 class="page-header">Drafts</h2>
+  </div>
+  <% @books.each do |book| %>
+    <div class="col-lg-4 col-sm-6 text-center">
+      <img class="img-responsive img-center" <%= image_tag book.cover.url %>
+        <h3><%= book.title %></h3>
+        <small><%= book.author %></small>
+        <p><%= book.summary %></p>
+        <% book.categories.each do |category| %>
+          <%= category.title %>
+        <% end %>
+          <p><%= link_to 'Edit', edit_book_path(book) %> |
+              <%= link_to 'Delete', book_path(book),
+            method: :delete,
+            data: { confirm: 'Delete a book?' }%></p>
+    </div>
+    <% end %>
+</div>
+<% end %>
