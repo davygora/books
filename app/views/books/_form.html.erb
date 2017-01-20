@@ -34,6 +34,10 @@
       <%= category.title %><br>
     <% end %>
   </div>
+  <div class="form-group">
+    <%= f.label :draft, 'Add to draft?' %>
+    <%= f.check_box :draft, {}, 'true', 'false' %>
+  </div>
   <div class="actions">
     <%= submit_tag @book.new_record? ? 'Create' : 'Update', class: 'btn btn-success' %>
   </div>

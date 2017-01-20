@@ -1,17 +1,22 @@
 <div class="row">
   <div class="col-lg-12">
-      <h2 class="page-header">All books</h2>
+    <h2 class="page-header">All books for the last week</h2>
   </div>
   <% @books.each do |book| %>
-  <div class="col-lg-4 col-sm-6 text-center">
-    <img class="img-circle img-responsive img-center" <%= image_tag book.cover.url %>
-      <h3><%= book.title %>
-          <small><%= book.author %></small>
-      </h3>
-      <p><%= book.summary %></p>
-      <% book.categories.each do |category| %>
-        <p> <%= category.title %> </p>
+    <div class="col-lg-4 col-sm-6 text-center">
+      <img class="img-responsive img-center" <%= image_tag book.cover.url %>
+        <h3><%= book.title %></h3>
+        <small><%= book.author %></small>
+        <p><%= book.summary %></p>
+        <% book.categories.each do |category| %>
+          <%= category.title %>
         <% end %>
-  </div>
+          <% if current_user && book.owner?(current_user)%>
+            <p><%= link_to 'Edit', edit_book_path(book) %> |
+                <%= link_to 'Delete', book_path(book),
+            method: :delete,
+            data: { confirm: 'Delete a book?' }%></p>
+          <% end %>
+    </div>
   <% end %>
 </div>
