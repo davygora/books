@@ -30,7 +30,7 @@ gem 'bootstrap-sass'
 # For cover book
 gem "paperclip", "~> 5.0.0"
 # Admin
-gem 'rails_admin', '~> 1.0'
+gem 'rails_admin', '~> 1.4'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
