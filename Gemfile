@@ -28,7 +28,7 @@ gem 'bcrypt', '~> 3.1.12'
 # Bootstrap
 gem 'bootstrap-sass'
 # For cover book
-gem "paperclip", "~> 5.0.0"
+gem "paperclip", "~> 6.1.0"
 # Admin
 gem 'rails_admin', '~> 1.4'
 # Use Unicorn as the app server
