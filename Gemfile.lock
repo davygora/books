@@ -54,7 +54,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
-    crass (1.0.4)
+    crass (1.0.6)
     debug_inspector (0.0.3)
     erubis (2.7.0)
     execjs (2.7.0)
@@ -90,7 +90,7 @@ GEM
       activerecord
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
-    loofah (2.2.3)
+    loofah (2.6.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.0)
@@ -104,7 +104,7 @@ GEM
     minitest (5.11.3)
     multi_json (1.13.1)
     nested_form (0.3.2)
-    nokogiri (1.10.5)
+    nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
     paperclip (6.1.0)
       activemodel (>= 4.2.0)
